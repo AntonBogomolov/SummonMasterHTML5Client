@@ -1,4 +1,5 @@
-Release/
+Release/*.d
+Release/*.o
 Debug/
 Tools/
 

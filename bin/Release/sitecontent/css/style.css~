@@ -1,0 +1,12 @@
+.logo
+{
+	width: 200px;
+	height: 170px;
+	margin: auto;	
+	background-image: url(logo.png);
+}
+
+body
+{	
+	
+}
