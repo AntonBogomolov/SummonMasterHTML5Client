@@ -1,0 +1,223 @@
+function isFieldExsist(array, field)
+{
+	for(var i = 0; i < array.length; i++)
+	{	
+		if(array[i].name == field) return true;		
+	}
+	return false;
+}
+
+function setResultList(jsonData)
+{
+	var dataSet = [];	
+	var respCnt = parseInt(jsonData.requestCnt);
+	var allCnt = 0;	
+	for(var i = 0; i < respCnt; i++)
+	{
+		var itemsCnt = jsonData[i].response.count;		
+		for(var index in jsonData[i].response.items)
+		{	
+			var item = jsonData[i].response.items[index];
+			dataSet.push(item);			
+			allCnt++;				
+		}		
+	}		
+	$("#taskStatus").text("Количество найденых записей: "+allCnt);
+	$("#resultList").text(dataSet.join());		
+}
+
+function initTables()
+{
+	var tableCnt = $("input[name='tablesCnt']").val();	
+	if(tableCnt > 0)
+	{	
+		for (var i = 1; i <= tableCnt; i++)
+		{			
+			var tableName = "Table"+(i).toString();
+			var tmp = $("input[name='table"+(i).toString()+"Fields']").val();	
+			if(tmp.length < 12) continue;			
+			var tableFields = JSON.parse(tmp).array;	
+									
+			tmp = $("input[name='table"+(i).toString()+"Data']").val();	
+			tmp = tmp.replace(/\r|\n/g, '');	
+			if(tmp.length < 12) continue;				
+			var tableData = JSON.parse(tmp).array;								
+			
+			tmp = $("input[name='table"+(i).toString()+"Func']").val();						
+			var clickFunc = new Function("elem", tmp);
+							
+			$("#"+tableName).jsGrid({
+				width: "90%",
+				//height: $(window).height()*0.5,
+ 
+				inserting: false,
+				editing: false,
+				sorting: true,
+				paging: true,
+				pageSize: 20,
+								 
+				data: tableData,
+				fields: tableFields,
+				
+				rowDoubleClick : clickFunc
+    		});
+ 		}
+	}
+}
+
+function setDataGrid(jsonData)
+{
+	$("#resultList").hide();
+	var dataSet = [];
+	var vkFields = [{name: "id", type: "number"}];
+	var respCnt = parseInt(jsonData.requestCnt);
+	var allCnt = 0;	
+	for(var i = 0; i < respCnt; i++)
+	{
+		var itemsCnt = jsonData[i].response.count;		
+		for(var index in jsonData[i].response.items)
+		{	
+			var item = jsonData[i].response.items[index];
+			for(var index in item)
+			{
+				if(!isFieldExsist(vkFields,index)) vkFields.push({name: index, type: "text"});   
+			}				
+			dataSet.push(item);			
+			allCnt++;		
+			if(allCnt > 500) break;
+		}
+		if(allCnt > 500) break;
+	}			
+	if(vkFields.length == 1)	
+	{
+		$("#jsGrid").hide();
+		$("#resultList").show();
+		setResultList(jsonData);		
+		return;
+	}
+	$("#taskStatus").text("Количество найденых записей: "+jsonData.count);
+		
+	$("#jsGrid").jsGrid({
+		width: "100%",
+		height: $(window).height()*0.5,
+ 
+		inserting: false,
+		editing: false,
+		sorting: true,
+		paging: true,
+		pageSize: 20,
+ 
+		data: dataSet,
+		fields: vkFields,
+ 			
+		rowDoubleClick : function (elem) {
+			var uri = "?page=user&id=" + elem.item.id;
+			var newWindow = window.open(uri, "_blank");
+			newWindow.focus();
+     	}
+    });
+}
+
+////////////////////////////////////////////////////////////////
+
+function setVisibility(block, isVisible)
+{
+	if(isVisible) block.show();
+	else block.hide();
+}
+
+function insertBlockAfter(newBlock, prevBlock) 
+{
+	$(newBlock).insertAfter(prevBlock);
+}
+
+function gotoPage(pageURI)
+{
+		location.href = pageURI;
+}
+
+function initVars() 
+{
+	
+}
+
+////////////////////////////////////////////////////////////////
+
+String.prototype.insert = function(index, string) 
+{
+  if (index > 0)
+    return this.substring(0, index) + string + this.substring(index, this.length);
+  else
+    return string + this;
+};
+
+function escapeRegExp(string) 
+{
+    return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+}
+
+function replaceAll(string, find, replace) 
+{
+  return string.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+}
+	  
+ //////////////////////////////////////////////////////////////////////////////////
+ 
+ $.fn.center = function() 
+ {
+    this.css("position", "fixed");
+    this.css("top", ($(window).height()/2 - this.height()/2) + "px");
+    this.css("left", ($(window).width()/2 - this.width()/2) + "px");
+    return this;
+}
+
+// use this transport for "binary" data type
+$.ajaxTransport("+binary", function(options, originalOptions, jqXHR){
+    // check for conditions and support for blob / arraybuffer response type
+    if (window.FormData && ((options.dataType && (options.dataType == 'binary')) || (options.data && ((window.ArrayBuffer && options.data instanceof ArrayBuffer) || (window.Blob && options.data instanceof Blob)))))
+    {
+        return {
+            // create new XMLHttpRequest
+            send: function(headers, callback){
+		// setup all variables
+      var xhr = new XMLHttpRequest(),
+		url = options.url,
+		type = options.type,
+		async = options.async || true,
+		// blob or arraybuffer. Default is blob
+		dataType = options.responseType || "blob",
+		data = options.data || null,
+		username = options.username || null,
+		password = options.password || null;
+					
+      xhr.addEventListener('load', function(){
+			var data = {};
+			data[options.dataType] = xhr.response;
+			// make callback and send data
+			callback(xhr.status, xhr.statusText, data, xhr.getAllResponseHeaders());
+      });
+ 
+      xhr.open(type, url, async, username, password);
+				
+		// setup custom headers
+		for (var i in headers ) {
+			xhr.setRequestHeader(i, headers[i] );
+		}
+				
+      xhr.responseType = dataType;
+      xhr.send(data);
+      },
+      abort: function(){
+      	jqXHR.abort();
+      }
+     };
+    }
+});
+jQuery.support.cors = true;
+
+$(document).ready(
+	function() 
+	{		
+		initVars();
+	}
+);
