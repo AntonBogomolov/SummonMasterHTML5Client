@@ -1,4 +1,0 @@
-<input type='hidden' name='retPage' value='{RETURNPAGE}' />		
-<input type='hidden' name='userId'  value='{USERID}' />
-<input type='hidden' name='user_id'  value='{USERID}' />
-{CONTENT}
