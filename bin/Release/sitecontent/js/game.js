@@ -1,41 +1,61 @@
 ;(function(){
+	var game = {};
+	var cursors;
 
-	var game = new Phaser.Game(200, 150, Phaser.CANVAS, 'phaser-example', { preload: preload, create: create });
-
-	function gameManager()
-	{	
-
-	}
-	function preload() {
-
-		//  You can fill the preloader with as many assets as your game requires
-
-		//  Here we are loading an image. The first parameter is the unique
-		//  string by which we'll identify the image later in our code.
-
-		//  The second parameter is the URL of the image (relative)
+	function preload()
+	{
 		game.load.image('einstein', 'ra_einstein.png');
-
-	}
-	function create() {
-
-		//  This creates a simple sprite that is using our loaded image and
-		//  displays it on-screen
+	};
+	function create()
+	{
 		var s = game.add.sprite(80, 0, 'einstein');
 		s.rotation = 0.5;
-	}
 
-	function loadInstance(id)
+		cursors = game.input.keyboard.createCursorKeys();
+			
+		var gameManager = getGameManager();
+		var callbackFunc = gameManager.onInstancesInfoLoaded.bind(gameManager);
+		GameManager.requests.gameGetInstancesList(callbackFunc);
+	};
+	function update()
 	{
-		var ldCorner = {x : 10,  y : 10};
-		var ruCorner = {x : 900, y : 1100};
-		this.requests.gameGetMapData(id, ldCorner, ruCorner);
-		//alert(JSON.stringify(result, null, 4));
+		if (cursors.left.isDown)
+		{
+			game.camera.x--;
+		}
+		else if (cursors.right.isDown)
+		{
+			game.camera.x++;
+		}
+		if (cursors.up.isDown)
+		{
+			game.camera.y--;
+		}
+		else if (cursors.down.isDown)
+		{
+			game.camera.y++;
+		}
+	};
+
+	function GameManager(width, height)
+	{	
+		game = new Phaser.Game(width, height, Phaser.CANVAS, 'phaser-example',
+		{ preload: preload, create: create, update: update });
+
+		this.instances = new Array();
+
+		this.onInstancesInfoLoaded = function()
+		{
+			if(this.instances.length > 0)
+			{
+				this.instances[0].loadInstance(null);
+			}
+		};
 	}
 
-	gameManager.loadInstance = loadInstance;
+	GameManager.requests = window.gameRequests;
+	GameManager.game = game;
 
-	gameManager.requests = window.gameRequests;
-	gameManager.game = game;
-	window.gameManager = gameManager;
+	window.GameManager = GameManager;
+	window.types.gameManager = GameManager;
 }());

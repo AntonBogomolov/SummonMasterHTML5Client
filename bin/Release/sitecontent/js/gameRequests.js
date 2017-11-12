@@ -4,7 +4,7 @@
 
     }
     
-    function showInstancesList(obj)
+    function initInstancesList(obj)
     {
         for (var index in obj.result)
         {
@@ -17,6 +17,10 @@
             $("#instances").append('<div id="inst'+id+'"><p> id: ' + id + ' descr: '+description+'</p></div>');
             $("#inst"+id).append('<div class="instanceInfo"><p>width:'+width+' height:'+height+'</p></div>');
             $("#inst"+id).append('<div class="instanceControls"><input type="button" value="load" onclick="window.gameManager.loadInstance('+id+')"/></div>');
+            
+            var gameManager = getGameManager();
+            var instance = new window.Instance(id, width, height, description);
+            gameManager.instances.push(instance);
         }
     }
     
@@ -25,7 +29,7 @@
   
     }
 
-    function gameGetMapData(id, ldCorner, ruCorner)
+    function gameGetMapData(id, ldCorner, ruCorner, callback)
     {
         var comUrl = 'http://summonmastercore.com?command=getMapData';	
         var userId = $("input[name='user_id']").val();
@@ -40,15 +44,14 @@
           responseType:'arraybuffer',
           success: function(msg)
           {  
-              alert(msg.byteLength);
               var obj = CBOR.decode(msg);
-              //alert(JSON.stringify(obj, null, 4));
-              return obj;	
+              callback(obj);
+              return;	
           },
         error: function (msg) 
           {  		
               alert("error");	
-              return '';
+              return;
           }
         });
     }
@@ -81,7 +84,7 @@
         });
     }
     
-    function gameGetInstancesList()
+    function gameGetInstancesList(callback)
     {
         var comUrl = 'http://summonmastercore.com?command=getInstancesList';	
         var userId = $("input[name='user_id']").val();
@@ -98,13 +101,14 @@
           {  
             var obj = CBOR.decode(msg);
             //alert(JSON.stringify(obj, null, 4));
-            showInstancesList(obj);
-            return msg;	
+            initInstancesList(obj);
+            callback();
+            return;	
           },
           error: function (msg) 
           {  		
             alert("error");	
-            return '';
+            return;
           }
         });
     }

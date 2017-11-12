@@ -17,8 +17,15 @@ function gotoPage(pageURI)
 
 function initVars() 
 {
-	
+  gameManager = new window.GameManager(400, 300);
 }
+
+function getGameManager()
+{
+  return gameManager;
+}
+
+
 
 ////////////////////////////////////////////////////////////////
 
@@ -93,6 +100,9 @@ $.ajaxTransport("+binary", function(options, originalOptions, jqXHR){
     }
 });
 jQuery.support.cors = true;
+
+window.types = {};
+var gameManager = null;
 
 $(document).ready(
 	function() 
