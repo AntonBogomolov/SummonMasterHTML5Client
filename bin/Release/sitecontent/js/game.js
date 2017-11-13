@@ -5,11 +5,12 @@
 	function preload()
 	{
 		game.load.image('einstein', 'ra_einstein.png');
+		game.load.image('tiles', 'tiles.png');
 	};
 	function create()
 	{
-		var s = game.add.sprite(80, 0, 'einstein');
-		s.rotation = 0.5;
+		//var s = game.add.sprite(80, 0, 'einstein');
+		//s.rotation = 0.5;
 
 		cursors = game.input.keyboard.createCursorKeys();
 			
@@ -41,6 +42,7 @@
 	{	
 		game = new Phaser.Game(width, height, Phaser.CANVAS, 'phaser-example',
 		{ preload: preload, create: create, update: update });
+		this.game = game;
 
 		this.instances = new Array();
 

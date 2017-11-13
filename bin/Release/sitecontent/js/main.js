@@ -12,12 +12,12 @@ function insertBlockAfter(newBlock, prevBlock)
 
 function gotoPage(pageURI)
 {
-		location.href = pageURI;
+  location.href = pageURI;
 }
 
 function initVars() 
 {
-  gameManager = new window.GameManager(400, 300);
+  gameManager = new window.GameManager(800, 600);
 }
 
 function getGameManager()

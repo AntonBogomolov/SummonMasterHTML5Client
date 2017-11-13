@@ -2506,3 +2506,325 @@
 [ 2017-11-06 (Mon) 17:36:52 ] 0.04
 [ 2017-11-06 (Mon) 17:36:52 ] 0.04
 [ 2017-11-06 (Mon) 17:36:53 ] 0.04
+[ 2017-11-13 (Mon) 15:36:33 ] Error: can't connect to MySQL server
+[ 2017-11-13 (Mon) 15:36:33 ] DB Reconnected
+[ 2017-11-13 (Mon) 15:36:36 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:36:36 ] Start Request: [/] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:36:36 ] Page request: index
+[ 2017-11-13 (Mon) 15:36:36 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] Start Request: [/css/style.css] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:36:37 ] Add file to cache, cache size: 0 Kb
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] Start Request: [/js/jquery-1.11.3.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:36:37 ] Add file to cache, cache size: 93 Kb
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] Start Request: [/js/cbor.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:36:37 ] Add file to cache, cache size: 105 Kb
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] Start Request: [/js/main.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:36:37 ] Add file to cache, cache size: 108 Kb
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] Start Request: [/js/gameRequests.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:36:37 ] Add file to cache, cache size: 111 Kb
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] Start Request: [/js/instance.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:36:37 ] Add file to cache, cache size: 115 Kb
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] Start Request: [/js/tiles.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:36:37 ] Add file to cache, cache size: 116 Kb
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] Start Request: [/js/game.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:36:37 ] Add file to cache, cache size: 117 Kb
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:36:37 ] Start Request: [/js/phaser.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:36:37 ] Add file to cache, cache size: 919 Kb
+[ 2017-11-13 (Mon) 15:36:37 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:36:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:36:38 ] Start Request: [/js/phaser.map] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:36:38 ] file load error
+[ 2017-11-13 (Mon) 15:36:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:36:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:36:38 ] Start Request: [/ra_einstein.png] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:36:38 ] file load error
+[ 2017-11-13 (Mon) 15:36:38 ] file load error
+[ 2017-11-13 (Mon) 15:36:38 ] Add file to cache, cache size: 995 Kb
+[ 2017-11-13 (Mon) 15:36:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:36:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:36:38 ] Start Request: [/tiles.png] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:36:38 ] file load error
+[ 2017-11-13 (Mon) 15:36:38 ] file load error
+[ 2017-11-13 (Mon) 15:36:38 ] Add file to cache, cache size: 999 Kb
+[ 2017-11-13 (Mon) 15:36:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:37:19 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:37:19 ] Start Request: [/favicon.ico] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:37:19 ] file load error
+[ 2017-11-13 (Mon) 15:37:19 ] file load error
+[ 2017-11-13 (Mon) 15:37:19 ] file load error
+[ 2017-11-13 (Mon) 15:37:19 ] file load error
+[ 2017-11-13 (Mon) 15:37:19 ] file load error
+[ 2017-11-13 (Mon) 15:37:19 ] file load error
+[ 2017-11-13 (Mon) 15:37:19 ] file load error
+[ 2017-11-13 (Mon) 15:37:19 ] Page request: index
+[ 2017-11-13 (Mon) 15:37:19 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:00 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:00 ] Start Request: [/] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:00 ] Page request: index
+[ 2017-11-13 (Mon) 15:38:00 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] Start Request: [/css/style.css] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] Start Request: [/js/jquery-1.11.3.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] Start Request: [/js/phaser.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] Start Request: [/js/cbor.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] Start Request: [/js/main.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] Start Request: [/js/gameRequests.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] Start Request: [/js/instance.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] Start Request: [/js/tiles.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:01 ] Start Request: [/js/game.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:01 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:02 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:02 ] Start Request: [/ra_einstein.png] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:02 ] file load error
+[ 2017-11-13 (Mon) 15:38:02 ] file load error
+[ 2017-11-13 (Mon) 15:38:02 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:02 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:02 ] Start Request: [/tiles.png] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:02 ] file load error
+[ 2017-11-13 (Mon) 15:38:02 ] file load error
+[ 2017-11-13 (Mon) 15:38:02 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:45 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:45 ] Start Request: [/] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:45 ] Page request: index
+[ 2017-11-13 (Mon) 15:38:45 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:45 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:45 ] Start Request: [/css/style.css] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:45 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:45 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:45 ] Start Request: [/js/jquery-1.11.3.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:45 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:45 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:45 ] Start Request: [/js/phaser.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:45 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:46 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:46 ] Start Request: [/js/cbor.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:46 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:46 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:46 ] Start Request: [/js/main.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:46 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:46 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:46 ] Start Request: [/js/gameRequests.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:46 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:46 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:46 ] Start Request: [/js/instance.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:46 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:46 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:46 ] Start Request: [/js/tiles.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:46 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:46 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:46 ] Start Request: [/js/game.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:46 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:47 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:47 ] Start Request: [/js/phaser.map] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:47 ] file load error
+[ 2017-11-13 (Mon) 15:38:47 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:47 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:47 ] Start Request: [/ra_einstein.png] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:47 ] file load error
+[ 2017-11-13 (Mon) 15:38:47 ] file load error
+[ 2017-11-13 (Mon) 15:38:47 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:38:47 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:38:47 ] Start Request: [/tiles.png] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:38:47 ] file load error
+[ 2017-11-13 (Mon) 15:38:47 ] file load error
+[ 2017-11-13 (Mon) 15:38:47 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:42:39 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:42:39 ] Start Request: [/] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:42:39 ] Page request: index
+[ 2017-11-13 (Mon) 15:42:39 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:42:39 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:42:39 ] Start Request: [/css/style.css] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:43:34 ] Error: can't connect to MySQL server
+[ 2017-11-13 (Mon) 15:43:34 ] DB Reconnected
+[ 2017-11-13 (Mon) 15:43:37 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:43:37 ] Start Request: [/] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:43:37 ] Page request: index
+[ 2017-11-13 (Mon) 15:43:37 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] Start Request: [/css/style.css] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:43:38 ] Add file to cache, cache size: 0 Kb
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] Start Request: [/js/jquery-1.11.3.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:43:38 ] Add file to cache, cache size: 93 Kb
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] Start Request: [/js/phaser.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:43:38 ] Add file to cache, cache size: 895 Kb
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] Start Request: [/js/cbor.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:43:38 ] Add file to cache, cache size: 907 Kb
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] Start Request: [/js/main.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:43:38 ] Add file to cache, cache size: 910 Kb
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] Start Request: [/js/gameRequests.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] Start Request: [/js/instance.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:43:38 ] Add file to cache, cache size: 913 Kb
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] Add file to cache, cache size: 917 Kb
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] Start Request: [/js/tiles.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:43:38 ] Add file to cache, cache size: 918 Kb
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] Start Request: [/js/game.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:43:38 ] Add file to cache, cache size: 919 Kb
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] Start Request: [/ra_einstein.png] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:43:38 ] file load error
+[ 2017-11-13 (Mon) 15:43:38 ] file load error
+[ 2017-11-13 (Mon) 15:43:38 ] Add file to cache, cache size: 995 Kb
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] Start Request: [/tiles.png] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:43:38 ] file load error
+[ 2017-11-13 (Mon) 15:43:38 ] file load error
+[ 2017-11-13 (Mon) 15:43:38 ] Add file to cache, cache size: 999 Kb
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:43:38 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:12 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:12 ] Start Request: [/] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:12 ] Page request: index
+[ 2017-11-13 (Mon) 15:44:12 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] Start Request: [/css/style.css] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] Start Request: [/js/jquery-1.11.3.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] Start Request: [/js/phaser.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] Start Request: [/js/cbor.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] Start Request: [/js/main.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] Start Request: [/js/gameRequests.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] Start Request: [/js/instance.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] Start Request: [/js/tiles.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:13 ] Start Request: [/js/game.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:13 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:14 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:14 ] Start Request: [/ra_einstein.png] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:14 ] file load error
+[ 2017-11-13 (Mon) 15:44:14 ] file load error
+[ 2017-11-13 (Mon) 15:44:14 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:14 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:14 ] Start Request: [/tiles.png] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:14 ] file load error
+[ 2017-11-13 (Mon) 15:44:14 ] file load error
+[ 2017-11-13 (Mon) 15:44:14 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] Start Request: [/] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:26 ] Page request: index
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] Start Request: [/css/style.css] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] Start Request: [/js/jquery-1.11.3.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] Start Request: [/js/phaser.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] Start Request: [/js/cbor.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] Start Request: [/js/main.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] Start Request: [/js/gameRequests.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] Start Request: [/js/instance.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] Start Request: [/js/tiles.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:26 ] Start Request: [/js/game.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:26 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:27 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:27 ] Start Request: [/ra_einstein.png] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:27 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:44:27 ] Start Request: [/tiles.png] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:44:27 ] file load error
+[ 2017-11-13 (Mon) 15:44:27 ] file load error
+[ 2017-11-13 (Mon) 15:44:27 ] file load error
+[ 2017-11-13 (Mon) 15:44:27 ] file load error
+[ 2017-11-13 (Mon) 15:44:27 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:44:27 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 15:47:08 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 15:47:08 ] Start Request: [/favicon.ico] [127.0.0.1]
+[ 2017-11-13 (Mon) 15:47:08 ] file load error
+[ 2017-11-13 (Mon) 15:47:08 ] file load error
+[ 2017-11-13 (Mon) 15:47:08 ] file load error
+[ 2017-11-13 (Mon) 15:47:08 ] file load error
+[ 2017-11-13 (Mon) 15:47:08 ] file load error
+[ 2017-11-13 (Mon) 15:47:08 ] file load error
+[ 2017-11-13 (Mon) 15:47:08 ] file load error
+[ 2017-11-13 (Mon) 15:47:08 ] Page request: index
+[ 2017-11-13 (Mon) 15:47:08 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 16:05:39 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 16:05:39 ] Start Request: [/] [127.0.0.1]
+[ 2017-11-13 (Mon) 16:05:39 ] Page request: index
+[ 2017-11-13 (Mon) 16:05:39 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 16:05:40 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 16:05:40 ] Start Request: [/css/style.css] [127.0.0.1]
+[ 2017-11-13 (Mon) 16:05:40 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 16:05:40 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 16:05:40 ] Start Request: [/js/jquery-1.11.3.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 16:05:40 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 16:05:40 ] +++++++ REQUEST CREATED +++++++
+[ 2017-11-13 (Mon) 16:05:40 ] Start Request: [/js/phaser.min.js] [127.0.0.1]
+[ 2017-11-13 (Mon) 16:05:40 ] +++++++ REQUEST DONE    +++++++
+[ 2017-11-13 (Mon) 16:05:40 ] +++++++ REQUEST CREATED +++++++
