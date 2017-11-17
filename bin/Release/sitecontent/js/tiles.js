@@ -1,28 +1,40 @@
 ;(function(){
-    function Tile(biom, border)
+    function Tile(biom, border, isHasRoad, isHasRiver)
     {
         this.biom = biom;
         this.border = border;
+        this.isHasRoad = isHasRoad;
+        this.isHasRiver = isHasRiver;
 
-        this.packToUINT8 = function()
+        this.packToUINT16 = function()
         {
             var result = 0;
-            result = ((result & 0xF0) | (this.biom   & 0x0F));
-            result = ((result & 0x0F) | ((this.border << 4) & 0xF0));
+            result = ((result & 0xFFF0) | (this.biom   & 0x000F));
+            result = ((result & 0xFF0F) | ((this.border << 4) & 0x00F0));
+
+            var road = 0;
+            if(this.isHasRoad) road = 1;
+            result = ((result & 65279)  | ((road << 8) & 256));
+            var river = 0;
+            if(this.isHasRiver) river = 1;
+            result = ((result & 65023)  | ((river << 9) & 512));
+
             return result;
         };
     }
     function createTileFromUINTValue(val)
     {
-        var biom = val & 0x0F;
-        var border = ((val & 0xF0) >> 4 );
+        var biom = val & 0x000F;
+        var border = ((val & 0x00F0) >> 4 );
+        var isHasRoad  = ((val & 256) >> 8 );
+        var isHasRiver = ((val & 512) >> 9 );
 
-        return new Tile(biom, border);
+        return new Tile(biom, border, isHasRoad, isHasRiver);
     }
     function getTileNumberInTileSetFromUINT(tileVal, tileSetWidth)
     {
-        var biom = tileVal & 0x0F;
-        var border = ((tileVal & 0xF0) >> 4 );
+        var biom = tileVal & 0x000F;
+        var border = ((tileVal & 0x00F0) >> 4 );
 
         return biom * tileSetWidth + border;
     }

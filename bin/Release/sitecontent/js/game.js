@@ -4,17 +4,15 @@
 
 	function preload()
 	{
-		game.load.image('einstein', 'ra_einstein.png');
 		game.load.image('tiles', 'tiles.png');
 	};
 	function create()
-	{
-		//var s = game.add.sprite(80, 0, 'einstein');
-		//s.rotation = 0.5;
+	{	
+		var gameManager = getGameManager();
 
 		cursors = game.input.keyboard.createCursorKeys();
-			
-		var gameManager = getGameManager();
+		game.input.onDown.add(gameManager.onClick, gameManager);
+
 		var callbackFunc = gameManager.onInstancesInfoLoaded.bind(gameManager);
 		GameManager.requests.gameGetInstancesList(callbackFunc);
 	};
@@ -22,19 +20,19 @@
 	{
 		if (cursors.left.isDown)
 		{
-			game.camera.x--;
+			game.camera.x-= 5;
 		}
 		else if (cursors.right.isDown)
 		{
-			game.camera.x++;
+			game.camera.x+= 5;
 		}
 		if (cursors.up.isDown)
 		{
-			game.camera.y--;
+			game.camera.y-= 5;
 		}
 		else if (cursors.down.isDown)
 		{
-			game.camera.y++;
+			game.camera.y+= 5;
 		}
 	};
 
@@ -53,6 +51,24 @@
 				this.instances[0].loadInstance(null);
 			}
 		};
+		this.onClick = function()
+		{
+			if(this.instances.length > 0)
+			{
+				var gameManager = getGameManager();
+
+				var layer = this.instances[0].tileMap.layers[0];
+				ldCorner = {};
+				ldCorner.x = layer.getTileX(game.input.activePointer.worldX) - 10;
+				ldCorner.y = layer.getTileY(game.input.activePointer.worldY) - 10;
+
+				ruCorner = {};
+				ruCorner.x = layer.getTileX(game.input.activePointer.worldX) + 10;
+				ruCorner.y = layer.getTileY(game.input.activePointer.worldY) + 10;
+
+				this.instances[0].updateMapRegion(ldCorner, ruCorner);
+			}
+		}
 	}
 
 	GameManager.requests = window.gameRequests;
