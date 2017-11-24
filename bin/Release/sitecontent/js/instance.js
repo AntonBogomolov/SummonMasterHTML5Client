@@ -91,7 +91,7 @@
             this.blockData = new Array(this.width * this.height);
 
             var warFogTile = new Tile(Tile.Bioms.WARFOG, Tile.Borders.NONE);
-            var warFogVal  = warFogTile.packToUINT8();
+            var warFogVal  = warFogTile.packToUINT16();
             var currRow = 0;
             var currCol = 0;
             var counter = 0;
