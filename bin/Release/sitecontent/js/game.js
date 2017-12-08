@@ -9,7 +9,7 @@
 	function create()
 	{	
 		var gameManager = getGameManager();
-
+		
 		cursors = game.input.keyboard.createCursorKeys();
 		game.input.onDown.add(gameManager.onClick, gameManager);
 
@@ -44,8 +44,20 @@
 
 		this.instances = new Array();
 
-		this.onInstancesInfoLoaded = function()
+		this.onInstancesInfoLoaded = function(obj)
 		{
+			for (var index in obj.result)
+			{
+				var elem  = obj.result[index];
+				var description = elem.description;
+				var id = elem.objectId;
+				var width  = elem.map.width;
+				var height = elem.map.height;
+	
+				var instance = new window.Instance(id, width, height, description);
+				this.instances.push(instance);
+			}
+
 			if(this.instances.length > 0)
 			{
 				this.instances[0].loadInstance(null);
