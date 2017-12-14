@@ -1,5 +1,23 @@
 <div>
-	<input type="button" onclick="gameManager.requests.gameGetInstancesList()"/>
+	<h2>Authorisation</h2>
+	<input type="text" name="login">
+	<input type="text" name="pass">
+	<input type="checkbox" name="isNew">
+	<input type="button" value="Login User" onclick="loginUser()"/>
 </div>
+<br>
+
+<div>
+	<h2>Login Player</h2>
+	<input type="text" name="playerKey">
+	<input type="button" value="Login" onclick="loginPlayer()"/>
+</div>
+<div>
+	<h2>Create New Player</h2>
+	<input type="text" name="playerName">
+	<input type="button" value="Create New" onclick="createPlayer()"/>
+</div>
+<br>
 <div id="instances">
+	<input type="button" value="Init instances" onclick="initInstances()"/>	
 </div>

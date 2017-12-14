@@ -25,7 +25,62 @@ function getGameManager()
   return gameManager;
 }
 
+function loginPlayer()
+{
+  var playerKey = $("input[name='playerKey']").val();
 
+  var callbackFunc = gameManager.onAcceptedUserPlayer.bind(gameManager);
+  window.GameManager.requests.gameLoginPlayer(0, playerKey, callbackFunc);
+}
+
+function createPlayer()
+{
+  var playerName = $("input[name='playerName']").val();
+  var playerParams = {};
+  playerParams.name = playerName;
+
+  var callbackFunc = gameManager.onAcceptedUserPlayer.bind(gameManager);
+  window.GameManager.requests.gameCreatePlayer(playerParams, callbackFunc);
+}
+
+function initInstances()
+{
+  var callbackFunc = gameManager.onInstancesInfoLoaded.bind(gameManager);
+  window.GameManager.requests.gameGetInstancesList(callbackFunc);
+}
+
+function loginUser()
+{
+  var login = $("input[name='login']").val();
+  var pass  = $("input[name='pass']").val();
+  var isNew = $("input[name='isNew']").is(':checked')
+
+  var callbackFunc = onLoginUser;
+  window.GameManager.requests.loginUser(login, pass, isNew, callbackFunc);
+}
+function logoutUser()
+{
+  var callbackFunc = onLogoutUser;
+  window.GameManager.requests.gameLoginPlayer(callbackFunc);
+}
+function onLoginUser(msg)
+{
+  var obj = JSON.parse(msg);
+  if(msg.length > 4 && obj.cookie != undefined && obj.cookie != "GUEST")
+  {
+    $("input[name='userSession']").val(obj.cookie);
+    $("input[name='user_id']").val(obj.id);
+  }
+  else
+  {
+    alert("unsuccess");
+  }
+}
+function onLogoutUser(msg)
+{
+  $("input[name='userSession']").val("");
+  $("input[name='user_id']").val("");
+}
 
 ////////////////////////////////////////////////////////////////
 

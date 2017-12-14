@@ -5,6 +5,8 @@
 	function preload()
 	{
 		game.load.image('tiles', 'tiles.png');
+		game.load.spritesheet('shPlayer', 'ghost.png',   100, 90, 1);
+		game.load.spritesheet('shMon', 'minotaurus.png', 120, 95, 1);
 	};
 	function create()
 	{	
@@ -41,6 +43,7 @@
 		game = new Phaser.Game(width, height, Phaser.CANVAS, 'phaser-example',
 		{ preload: preload, create: create, update: update });
 		this.game = game;
+		this.player = {};
 
 		this.instances = new Array();
 
@@ -53,7 +56,7 @@
 				var id = elem.objectId;
 				var width  = elem.map.width;
 				var height = elem.map.height;
-	
+
 				var instance = new window.Instance(id, width, height, description);
 				this.instances.push(instance);
 			}
@@ -80,7 +83,12 @@
 
 				this.instances[0].updateMapRegion(ldCorner, ruCorner);
 			}
-		}
+		};
+		this.onAcceptedUserPlayer = function(player)
+		{
+			player = new window.Player(player);
+			alert(player.result.key);
+		};
 	}
 
 	GameManager.requests = window.gameRequests;

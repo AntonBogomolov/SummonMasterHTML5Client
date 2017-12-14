@@ -28,7 +28,7 @@ void CSummonMasterApp::init()
 
 	CSessionManager*  sessionManager  = CManagers::getInstance()->getSessionManager();
 	sessionManager->setIsNeedSessionCheck(true);
-
+  
     CConfigHelper::getInstance();
 	// Paths INIT
 	CPathsHelper* paths = CPathsHelper::getInstance();
