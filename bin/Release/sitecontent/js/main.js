@@ -18,19 +18,31 @@ function gotoPage(pageURI)
 function initVars() 
 {
   gameManager = new window.GameManager(800, 600);
+  metrics = new window.Metrics();
 }
 
 function getGameManager()
 {
   return gameManager;
 }
+function getMetrics()
+{
+  return metrics;
+}
 
 function loginPlayer()
 {
   var playerKey = $("input[name='playerKey']").val();
-
+  
   var callbackFunc = gameManager.onAcceptedUserPlayer.bind(gameManager);
-  window.GameManager.requests.gameLoginPlayer(0, playerKey, callbackFunc);
+  window.GameManager.requests.gameLoginPlayer(gameManager.activeInstance.id, playerKey, callbackFunc);
+}
+function logoutPlayer()
+{
+  var playerKey = $("input[name='playerKey']").val();
+
+  var callbackFunc = gameManager.onLogoutUserPlayer.bind(gameManager);
+  window.GameManager.requests.gameLogoutPlayer(playerKey, callbackFunc);
 }
 
 function createPlayer()
@@ -53,7 +65,7 @@ function loginUser()
 {
   var login = $("input[name='login']").val();
   var pass  = $("input[name='pass']").val();
-  var isNew = $("input[name='isNew']").is(':checked')
+  var isNew = $("input[name='isNew']").is(':checked');
 
   var callbackFunc = onLoginUser;
   window.GameManager.requests.loginUser(login, pass, isNew, callbackFunc);
@@ -61,7 +73,7 @@ function loginUser()
 function logoutUser()
 {
   var callbackFunc = onLogoutUser;
-  window.GameManager.requests.gameLoginPlayer(callbackFunc);
+  window.GameManager.requests.logoutUser(callbackFunc);
 }
 function onLoginUser(msg)
 {
@@ -70,16 +82,21 @@ function onLoginUser(msg)
   {
     $("input[name='userSession']").val(obj.cookie);
     $("input[name='user_id']").val(obj.id);
+    $("input[name='playerKey']").val(obj.key);
+    $("#loginStatus").text("success");
   }
   else
   {
-    alert("unsuccess");
+    $("#loginStatus").text("unsuccess");
   }
 }
 function onLogoutUser(msg)
 {
   $("input[name='userSession']").val("");
   $("input[name='user_id']").val("");
+
+  $("input[name='login']").val("");
+  $("input[name='pass']").val("");
 }
 
 ////////////////////////////////////////////////////////////////
@@ -158,6 +175,7 @@ jQuery.support.cors = true;
 
 window.types = {};
 var gameManager = null;
+var metrics = null;
 
 $(document).ready(
 	function() 

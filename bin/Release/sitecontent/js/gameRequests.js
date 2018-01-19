@@ -40,7 +40,7 @@
     
         doAjaxRequest(comUrl, postData, "binary", "arraybuffer", callback);
     }
-    function gameLoginPlayer(instanceId, playerKey, instanceId, callback)
+    function gameLoginPlayer(instanceId, playerKey, callback)
     {
         var comUrl = 'http://summonmastercore.com?command=loginPlayer';	
         var userId = $("input[name='user_id']").val();
@@ -49,7 +49,7 @@
     
         doAjaxRequest(comUrl, postData, "binary", "arraybuffer", callback);
     }
-    function gameLogoutPlayer(instanceId, playerKey, callback)
+    function gameLogoutPlayer(playerKey, callback)
     {
         var comUrl = 'http://summonmastercore.com?command=logoutPlayer';	
         var userId = $("input[name='user_id']").val();
@@ -127,6 +127,16 @@
     
         doAjaxRequest(comUrl, postData, "binary", "arraybuffer", callback);
     }
+
+    function gameGetMetrics(callback)
+    {
+        var comUrl = 'http://summonmastercore.com?command=getMetrics';	
+        var userId = $("input[name='user_id']").val();
+        var userSession = $("input[name='userSession']").val();
+        var postData = '&user_id='+userId+'&user_session='+userSession;
+    
+        doAjaxRequest(comUrl, postData, "binary", "arraybuffer", callback);
+    }
     
     function gameGetInstancesList(callback)
     {
@@ -198,6 +208,7 @@
     gameRequests.gameGetPlayer = gameGetPlayer;
     gameRequests.gameSetPathTarget = gameSetPathTarget;
     gameRequests.gameGetInstancesList = gameGetInstancesList;
+    gameRequests.gameGetMetrics = gameGetMetrics;
     gameRequests.loginUser  = loginUser;
     gameRequests.logoutUser = logoutUser;
 

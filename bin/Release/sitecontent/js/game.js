@@ -38,12 +38,29 @@
 		}
 	};
 
+	function Metrics()
+	{
+		this.tileWidth = 32;
+		this.tileHeight = 32;
+		this.tileCenterX = this.tileWidth  / 2;
+		this.tileCenterY = this.tileHeight / 2;
+		
+		this.onAcceptServerMetrics = function(serverMetrics)
+		{
+			alert(serverMetrics.result.cellWidth);
+		};
+
+		var callbackFunc = this.onAcceptServerMetrics.bind(this);
+		GameManager.requests.gameGetMetrics(callbackFunc);
+	};
+
 	function GameManager(width, height)
 	{	
 		game = new Phaser.Game(width, height, Phaser.CANVAS, 'phaser-example',
 		{ preload: preload, create: create, update: update });
 		this.game = game;
 		this.player = {};
+		this.activeInstance = {};
 
 		this.instances = new Array();
 
@@ -64,6 +81,7 @@
 			if(this.instances.length > 0)
 			{
 				this.instances[0].loadInstance(null);
+				this.activeInstance = this.instances[0];
 			}
 		};
 		this.onClick = function()
@@ -84,16 +102,22 @@
 				this.instances[0].updateMapRegion(ldCorner, ruCorner);
 			}
 		};
-		this.onAcceptedUserPlayer = function(player)
+		this.onAcceptedUserPlayer = function(playerJSON)
 		{
-			player = new window.Player(player);
-			alert(player.result.key);
+			player = new window.Player(playerJSON.result);
+			$("input[name='playerKey']").val(player.key);
 		};
+		this.onLogoutUserPlayer = function(jsonResult)
+		{
+			alert(jsonResult.result.key);
+			$("input[name='playerKey']").val("");
+		}
 	}
 
 	GameManager.requests = window.gameRequests;
 	GameManager.game = game;
 
+	window.Metrics = Metrics;
 	window.GameManager = GameManager;
 	window.types.gameManager = GameManager;
 }());
